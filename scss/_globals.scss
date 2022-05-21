@@ -1,5 +1,5 @@
 * {
-    font-family:'Karla', sans-serif;
+    font-family: 'Karla', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,4 +13,31 @@ html {
     overflow-x: none;
     scroll-behavior: smooth;
     min-width: remUnit(375);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'DM Serif Display', serif;
+}
+
+body {
+    @include breakpoints(tablet) {
+        background-color: red;
+    }
+
+    @include breakpoints(laptop) {
+        background-color: lightblue;
+    }
+
+    @include breakpoints(desktop) {
+        background-color: forestgreen;
+    }
+}
+
+.hide {
+    display: none;
 }

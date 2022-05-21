@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: remUnit(20);
+}
+
+.mobile_icons {
+    display: block;
+    cursor: pointer;
+
+    @include breakpoints(laptop) {
+        display: none;
+    }
+}
+
+.nav_menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 9%;
+    left: 0%;
+    right: 0%;
+    background-color: $VeryDarkViolet;
+    background-image: url(/images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    align-items: center;
+    height: remUnit(578);
+
+    a {
+        font-size: remUnit(20);
+        justify-content: space-evenly;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 700;
+        letter-spacing: remUnit(2);
+        margin: remUnit(20) remUnit(0);
+    }
+
+    .viewPlan {
+        border: remUnit(1.4) solid white;
+        width: 95%;
+        text-align: center;
+        padding: remUnit(15);
+    }
+}
+
+.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
