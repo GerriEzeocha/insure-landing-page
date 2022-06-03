@@ -138,6 +138,8 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #fafafa;
+  background-color: #2d2640;
 }
 
 main .heroPic {
@@ -162,5 +164,65 @@ main .desktop {
   main .desktop {
     display: block;
   }
+}
+
+main .hero_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.25rem;
+  text-align: center;
+  background-image: url(/images/bg-pattern-intro-left-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 40%;
+  height: 26rem;
+}
+
+main .hero_text_main {
+  margin-top: 4.375rem;
+  margin-bottom: 1.875rem;
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+}
+
+main .hero_text_reg {
+  padding: 0rem 4rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+}
+
+main .hero_button {
+  margin-bottom: 6.25rem;
+  text-align: center;
+  width: 32%;
+}
+
+main .hero_button p {
+  text-transform: uppercase;
+  border: 0.10625rem solid white;
+  padding: 0.5rem;
+  letter-spacing: 0.0625rem;
+}
+
+.moreDetails hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+}
+
+.moreDetails .bgImg {
+  position: relative;
+  left: 75%;
+  top: -159px;
+  z-index: 1;
+}
+
+.moreDetails .aboutInsure {
+  z-index: 5;
 }
 /*# sourceMappingURL=style.css.map */

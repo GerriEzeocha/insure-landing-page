@@ -4,6 +4,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: $VeryLightGray;
+    background-color: $DarkViolet;
+    // background-image: url(/images/bg-pattern-intro-right-mobile.svg);
+    // background-repeat: no-repeat;
+    // background-position: bottom -175px right 5px;
 
     .heroPic {
         width: 100%;
@@ -27,11 +32,65 @@ main {
         }
     }
 
-    // .desktop {
-    //     display: none;
+    .hero_text {
+        display: flex;
+        flex-direction: column;
+        padding: remUnit(20);
+        text-align: center;
+        background-image: url(/images/bg-pattern-intro-left-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 40%;
+        height: remUnit(416);
 
-    //     @include breakpoints(laptop) {
-    //         display: block;
-    //     }
-    // }
+        &_main {
+            margin-top: remUnit(70);
+            margin-bottom: remUnit(30);
+            font-size: remUnit(60);
+            line-height: remUnit(60)
+        }
+
+        &_reg {
+            padding: remUnit(0) remUnit(64);
+            line-height: remUnit(28);
+            font-weight: 300;
+        }
+    }
+
+    .hero_button {
+        margin-bottom: remUnit(100);
+        text-align: center;
+        width: 32%;
+
+        p {
+            text-transform: uppercase;
+            border: remUnit(1.7) solid white;
+            padding: remUnit(8);
+            letter-spacing: remUnit(1);
+        }
+    }
+}
+
+.moreDetails {
+    hr {
+        border: none;
+        border-top: 3px double #333;
+        color: #333;
+    }
+
+    .bgImg {
+        position: relative;
+        left: 75%;
+        top: -159px;
+        z-index: 1;
+    }
+
+    .aboutInsure {
+        z-index: 5;
+    }
+
+    // background-image: url(/images/bg-pattern-intro-right-mobile.svg);
+    // background-repeat: no-repeat;
+    // background-position: top -130px right -10px;
+
 }
