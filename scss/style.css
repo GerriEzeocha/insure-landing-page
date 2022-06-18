@@ -200,29 +200,269 @@ main .hero_button {
   margin-bottom: 6.25rem;
   text-align: center;
   width: 32%;
+  cursor: pointer;
 }
 
 main .hero_button p {
   text-transform: uppercase;
-  border: 0.10625rem solid white;
+  border: 0.125rem solid white;
   padding: 0.5rem;
   letter-spacing: 0.0625rem;
 }
 
-.moreDetails hr {
-  border: none;
-  border-top: 3px double #333;
-  color: #333;
+.pgDec {
+  height: 11.25rem;
 }
 
-.moreDetails .bgImg {
+.pgDec_hr {
+  border: none;
+  border-top: 0.0625rem solid #333;
+  position: relative;
+  top: -12.5rem;
+  width: 11.5rem;
+  left: 31%;
+  border-color: #95a9c6;
+}
+
+@media (min-width: 630px) {
+  .pgDec_hr {
+    left: 26%;
+    width: 22.1875rem;
+  }
+}
+
+.bgImg {
   position: relative;
   left: 75%;
-  top: -159px;
+  top: -9.9375rem;
   z-index: 1;
 }
 
+@media (min-width: 630px) {
+  .bgImg {
+    left: 84%;
+  }
+}
+
+.moreDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .moreDetails .aboutInsure {
-  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.moreDetails .aboutInsure .aB_title {
+  font-size: 3.4375rem;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 1.875rem;
+}
+
+.moreDetails .aboutInsure .aB_deets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 18.4375rem;
+  margin-bottom: 1.25rem;
+}
+
+.moreDetails .aboutInsure .aB_deets_subTitle {
+  font-size: 1.5625rem;
+}
+
+.moreDetails .aboutInsure .aB_deets_text {
+  width: 80%;
+  padding: 0rem 1.0625rem;
+  text-align: center;
+  color: #837d87;
+  letter-spacing: 0.04375rem;
+  line-height: 1.6875rem;
+}
+
+.howWeWrk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 6.25rem 1.875rem;
+  height: 28.125rem;
+  background-color: #2d2640;
+  color: white;
+  background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 47%;
+}
+
+.howWeWrk h1 {
+  text-align: center;
+  font-size: 3.4375rem;
+  line-height: 3.75rem;
+}
+
+.howWeWrk_button {
+  margin-bottom: 0.625rem;
+  text-align: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+.howWeWrk_button p {
+  text-transform: uppercase;
+  border: 0.125rem solid white;
+  padding: 0.5rem;
+  letter-spacing: 0.0625rem;
+}
+
+.ftr_holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fafafa;
+}
+
+.ftr_holder .ftr_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 12.5rem;
+  background-image: url(/images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ftr_holder .socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.ftr_hr {
+  border: none;
+  border-top: 0.0625rem solid #333;
+  position: relative;
+  top: 1.25rem;
+  width: 28.5rem;
+  border-color: #95a9c6;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  gap: 3rem;
+  text-align: center;
+  position: relative;
+  top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+footer .ftr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+footer .ftr_title {
+  color: #837d87;
+}
+
+footer .ftr_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+footer .ftr_link a {
+  color: #2b272f;
+}
+
+.attribution {
+  text-align: center;
+  position: relative;
+  font-size: 0.75rem;
+  color: gray;
+  background-color: #fafafa;
+}
+
+.attribution a {
+  color: gray;
 }
 /*# sourceMappingURL=style.css.map */

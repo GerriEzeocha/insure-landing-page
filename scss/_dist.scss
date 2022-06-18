@@ -61,36 +61,203 @@ main {
         margin-bottom: remUnit(100);
         text-align: center;
         width: 32%;
+        cursor: pointer;
 
         p {
             text-transform: uppercase;
-            border: remUnit(1.7) solid white;
+            border: remUnit(2) solid white;
             padding: remUnit(8);
             letter-spacing: remUnit(1);
         }
     }
 }
 
-.moreDetails {
-    hr {
-        border: none;
-        border-top: 3px double #333;
-        color: #333;
+.pgDec {
+    height: remUnit(180);
+}
+
+.pgDec_hr {
+    border: none;
+    border-top: remUnit(1) solid #333;
+    position: relative;
+    top: remUnit(-200);
+    width: remUnit(184);
+    left: 31%;
+    border-color: $GrayishBlue;
+
+    @include breakpoints(tablet) {
+        left: 26%;
+        width: remUnit(355);
     }
 
-    .bgImg {
-        position: relative;
-        left: 75%;
-        top: -159px;
-        z-index: 1;
+}
+
+.bgImg {
+    position: relative;
+    left: 75%;
+    top: remUnit(-159);
+    z-index: 1;
+
+    @include breakpoints(tablet) {
+        left: 84%;
     }
+}
+
+.moreDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .aboutInsure {
-        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .aB_title {
+            font-size: remUnit(55);
+            letter-spacing: remUnit(1);
+            margin-bottom: remUnit(30);
+        }
+
+        .aB_deets {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: remUnit(295);
+            margin-bottom: remUnit(20);
+
+            &_subTitle {
+                font-size: remUnit(25);
+            }
+
+            &_text {
+                width: 80%;
+                padding: remUnit(0) remUnit(17);
+                text-align: center;
+                color: $DarkGrayishViolet;
+                letter-spacing: remUnit(0.7);
+                line-height: remUnit(27);
+            }
+        }
+    }
+}
+
+.howWeWrk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: remUnit(100) remUnit(30);
+    height: remUnit(450);
+    background-color: $DarkViolet;
+    color: white;
+    background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 47%;
+
+    h1 {
+        text-align: center;
+        font-size: remUnit(55);
+        line-height: remUnit(60);
     }
 
-    // background-image: url(/images/bg-pattern-intro-right-mobile.svg);
-    // background-repeat: no-repeat;
-    // background-position: top -130px right -10px;
+    &_button {
+        margin-bottom: remUnit(10);
+        text-align: center;
+        width: 50%;
+        cursor: pointer;
 
+        p {
+            text-transform: uppercase;
+            border: remUnit(2) solid white;
+            padding: remUnit(8);
+            letter-spacing: remUnit(1);
+
+        }
+    }
+}
+
+.ftr_holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $VeryLightGray;
+
+
+    .ftr_intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        height: remUnit(200);
+        background-image: url(/images/bg-pattern-footer-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .socialIcons {
+        display: flex;
+        gap: remUnit(16);
+
+    }
+
+}
+
+.ftr_hr {
+    border: none;
+    border-top: remUnit(1) solid #333;
+    position: relative;
+    top: remUnit(20);
+    width: remUnit(456);
+    border-color: $GrayishBlue;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 3rem;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    padding-bottom: remUnit(40);
+
+    .ftr {
+        display: flex;
+        flex-direction: column;
+        gap: remUnit(32);
+        font-weight: 600;
+
+        &_title {
+            color: $DarkGrayishViolet;
+        }
+
+        &_link {
+            display: flex;
+            flex-direction: column;
+            gap: remUnit(16);
+
+            a {
+                color: $VeryDarkViolet;
+            }
+        }
+    }
+}
+
+.attribution {
+    text-align: center;
+    position: relative;
+    font-size: remUnit(12);
+    color: gray;
+    background-color: $VeryLightGray;
+
+    a {
+        color: gray;
+    }
 }
