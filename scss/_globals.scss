@@ -25,16 +25,10 @@ h6 {
 }
 
 body {
-    @include breakpoints(tablet) {
-        background-color: red;
-    }
-
-    @include breakpoints(laptop) {
-        background-color: lightblue;
-    }
+    background-color: $VeryLightGray;
 
     @include breakpoints(desktop) {
-        background-color: forestgreen;
+        // background-color: forestgreen;
     }
 }
 

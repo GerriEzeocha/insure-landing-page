@@ -3,6 +3,10 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: remUnit(20);
+
+    @include breakpoints(laptop) {
+        padding: remUnit(0) remUnit(25);
+    }
 }
 
 .mobile_icons {
@@ -41,6 +45,16 @@ header {
         font-weight: 700;
         letter-spacing: remUnit(2);
         margin: remUnit(20) remUnit(0);
+
+        @include breakpoints(laptop) {
+            font-size: remUnit(14);
+            font-weight: 300;
+            color: $VeryDarkViolet;
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
     }
 
     .viewPlan {
@@ -48,6 +62,38 @@ header {
         width: 95%;
         text-align: center;
         padding: remUnit(15);
+
+        @include breakpoints(laptop) {
+            border: remUnit(1.4) solid $VeryDarkViolet;
+            width: auto;
+            padding: remUnit(5) remUnit(15);
+
+            &:hover {
+                color: white;
+                background-color: $VeryDarkViolet;
+            }
+        }
+    }
+
+    @include breakpoints(laptop) {
+        flex-direction: row;
+        width: 65%;
+        justify-content: space-evenly;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        clip-path: none;
+        background: none;
+        border-top: none;
+        border-bottom: none;
+        height: remUnit(50);
+
+    }
+
+    @include breakpoints(desktop) {
+        max-width: 55%;
     }
 }
 

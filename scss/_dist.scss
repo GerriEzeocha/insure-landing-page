@@ -10,8 +10,26 @@ main {
     // background-repeat: no-repeat;
     // background-position: bottom -175px right 5px;
 
+    @include breakpoints(laptop) {
+        background-image: none;
+        flex-direction: row-reverse;
+        padding: remUnit(0) remUnit(48)
+    }
+
+    @include breakpoints(desktop) {
+        background-image: url(/images/bg-pattern-footer-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+
     .heroPic {
         width: 100%;
+
+        @include breakpoints(desktop) {
+            max-width: remUnit(620);
+            position: relative;
+            top: remUnit(160);
+        }
 
         img {
             width: 100%;
@@ -54,6 +72,19 @@ main {
             padding: remUnit(0) remUnit(64);
             line-height: remUnit(28);
             font-weight: 300;
+
+            @include breakpoints(laptop) {
+                padding: remUnit(0);
+            }
+        }
+
+        @include breakpoints(laptop) {
+            text-align: left;
+            background-image: none;
+        }
+
+        @include breakpoints(desktop) {
+            max-width: remUnit(700);
         }
     }
 
@@ -69,11 +100,34 @@ main {
             padding: remUnit(8);
             letter-spacing: remUnit(1);
         }
+
+    }
+
+    .MB {
+        @include breakpoints(laptop) {
+            display: none;
+        }
+    }
+
+    .LD {
+        display: none;
+
+        @include breakpoints(laptop) {
+            margin-top: remUnit(30);
+            display: block;
+            padding-top: remUnit(16);
+        }
     }
 }
 
 .pgDec {
     height: remUnit(180);
+
+    img {
+        @include breakpoints(laptop) {
+            display: none;
+        }
+    }
 }
 
 .pgDec_hr {
@@ -90,6 +144,15 @@ main {
         width: remUnit(355);
     }
 
+    @include breakpoints(laptop) {
+        width: remUnit(150);
+        left: 3%;
+        top: remUnit(152);
+    }
+
+    @include breakpoints(desktop) {
+        left: 8%;
+    }
 }
 
 .bgImg {
@@ -105,8 +168,36 @@ main {
 
 .moreDetails {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include breakpoints(laptop) {
+        padding: remUnit(0) remUnit(30);
+        align-items: start;
+    }
+
+    @include breakpoints(desktop) {
+        padding: remUnit(0) remUnit(160);
+        align-items: start;
+    }
+
+
+    .aB_title {
+        font-size: remUnit(55);
+        letter-spacing: remUnit(1);
+        margin-bottom: remUnit(30);
+
+        @include breakpoints(laptop) {
+            font-size: remUnit(40);
+        }
+
+        @include breakpoints(desktop) {
+            font-size: remUnit(55);
+
+        }
+
+    }
 
     .aboutInsure {
         display: flex;
@@ -114,10 +205,8 @@ main {
         justify-content: center;
         flex-direction: column;
 
-        .aB_title {
-            font-size: remUnit(55);
-            letter-spacing: remUnit(1);
-            margin-bottom: remUnit(30);
+        @include breakpoints(laptop) {
+            flex-direction: row;
         }
 
         .aB_deets {
@@ -128,8 +217,16 @@ main {
             height: remUnit(295);
             margin-bottom: remUnit(20);
 
+            @include breakpoints(laptop) {
+                align-items: flex-start;
+            }
+
             &_subTitle {
                 font-size: remUnit(25);
+
+                @include breakpoints(laptop) {
+                    font-size: remUnit(16);
+                }
             }
 
             &_text {
@@ -139,6 +236,22 @@ main {
                 color: $DarkGrayishViolet;
                 letter-spacing: remUnit(0.7);
                 line-height: remUnit(27);
+
+                @include breakpoints(laptop) {
+                    text-align: left;
+                    padding: 0;
+                }
+            }
+
+            &_icon {
+                img {
+                    width: 100%;
+                }
+
+                @include breakpoints(laptop) {
+                    width: remUnit(50);
+                    height: remUnit(50);
+                }
             }
         }
     }
@@ -158,10 +271,36 @@ main {
     background-position: top right;
     background-size: 47%;
 
+    @include breakpoints(laptop) {
+        flex-direction: row;
+        height: remUnit(180);
+        padding: remUnit(0) remUnit(64);
+        background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+        justify-content: space-between;
+    }
+
+    @include breakpoints(laptop) {
+        padding: remUnit(0) remUnit(90);
+    }
+
     h1 {
         text-align: center;
         font-size: remUnit(55);
         line-height: remUnit(60);
+
+        @include breakpoints(laptop) {
+            width: 33%;
+            font-size: remUnit(30);
+            line-height: remUnit(29);
+            text-align: left;
+        }
+
+        @include breakpoints(desktop) {
+            width: 32%;
+            font-size: remUnit(60);
+            line-height: remUnit(50);
+            text-align: left;
+        }
     }
 
     &_button {
@@ -170,12 +309,25 @@ main {
         width: 50%;
         cursor: pointer;
 
+        @include breakpoints(laptop) {
+            width: 22%;
+        }
+
         p {
             text-transform: uppercase;
             border: remUnit(2) solid white;
             padding: remUnit(8);
             letter-spacing: remUnit(1);
 
+            @include breakpoints(laptop) {
+                padding: remUnit(4);
+            }
+
+        }
+
+        &:hover {
+            color: $VeryDarkViolet;
+            background-color: white;
         }
     }
 }
@@ -186,6 +338,12 @@ main {
     align-items: center;
     justify-content: center;
     background-color: $VeryLightGray;
+
+    @include breakpoints(laptop) {
+        background-image: url(/images/bg-pattern-footer-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
 
 
     .ftr_intro {
@@ -199,12 +357,26 @@ main {
         background-repeat: no-repeat;
         background-size: cover;
 
+        @include breakpoints(laptop) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: remUnit(0) remUnit(48);
+            background-image: none;
+            height: remUnit(100);
+            border-bottom: remUnit(0.80) solid $DarkGrayishViolet;
+        }
+
     }
 
     .socialIcons {
         display: flex;
         gap: remUnit(16);
+        cursor: pointer;
 
+        img:hover {
+            position: relative;
+            top: remUnit(-5);
+        }
     }
 
 }
@@ -222,11 +394,18 @@ footer {
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
-    gap: 3rem;
+    gap: remUnit(48);
     text-align: center;
     position: relative;
-    top: 2rem;
+    top: remUnit(32);
     padding-bottom: remUnit(40);
+
+    @include breakpoints(laptop) {
+        flex-direction: row;
+        text-align: left;
+        gap: remUnit(170);
+    }
+
 
     .ftr {
         display: flex;
@@ -245,6 +424,19 @@ footer {
 
             a {
                 color: $VeryDarkViolet;
+
+                @include breakpoints(laptop) {
+                    font-weight: 300;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            @include breakpoints(laptop) {
+                align-items: flex-start;
+                gap: remUnit(11);
             }
         }
     }
@@ -259,5 +451,9 @@ footer {
 
     a {
         color: gray;
+    }
+
+    @include breakpoints(laptop) {
+        margin-top: remUnit(30);
     }
 }
